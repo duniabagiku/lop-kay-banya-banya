@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>the only one sekar</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-image: url(kayforbackground.jpeg) ; /* Ganti dengan nama file PNG kamu */
-      background-size: contain
-      background-position: top
+      background-image: url(kayforbackground.jpeg);
+      background-size: contain;
+      background-position: top;
       font-family: sans-serif;
+      color: rgb(246, 246, 246);
+    }
+
+    .tengah {
+      text-align: center;
+      margin: 20px 0;
     }
 
     .container {
@@ -19,7 +25,7 @@
       justify-content: center;
       align-items: center;
       gap: 20px;
-      height: 100vh;
+      height: calc(100vh - 100px);
       padding: 20px;
       box-sizing: border-box;
     }
@@ -32,56 +38,80 @@
       border: 5px solid white;
       border-radius: 15px;
       overflow: hidden;
-      background-color: rgba(255, 255, 255, 0.2); /* efek transparan */
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      display: flex;
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       justify-content: center;
       align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    .frame:hover {
+      transform: scale(1.05);
     }
 
     .frame img {
       max-width: 100%;
       max-height: 100%;
       object-fit: cover;
+      display: block;
     }
-    
+
+    .labels {
+      display: flex;
+      justify-content: center;
+      gap: 70px;
+      margin-top: 10px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: white;
+    }
+
+   
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+        padding: 10px;
+      }
+
+      .frame {
+        width: 90vw;
+        height: 120px;
+      }
+
+      .labels {
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 5px;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="tengah"><h1>Choose the game</h1></div>
-<style> .tengah{text-align: center;
-color: rgb(246, 246, 246);}
- </style>
   <div class="container">
     <div class="frame">
-      <a href="intent://#Intent;package=com.mobile.legends;scheme=mlbb;end" target="_blank">
-      <img src="Lunox, kadita, Guinevere, beatrix, Odette.jpg" alt="Gambar 1"> <!-- Ganti dengan gambar kamu -->
-    </a></div>
+      <a href="intent://#Intent;package=com.mobile.legends;scheme=mlbb;end" target="_blank" rel="noopener noreferrer">
+        <img src="Lunox, kadita, Guinevere, beatrix, Odette.jpg" alt="Mobile Legends heroes" />
+      </a>
+    </div>
     <div class="frame">
-  <a href="roblox://">
-    <img src="Roblox.jpg" alt="Klik untuk buka Roblox">
-  </a>
-</div>
+      <a href="roblox://" target="_blank" rel="noopener noreferrer">
+        <img src="Roblox.jpg" alt="Roblox game logo" />
+      </a>
+    </div>
     <div class="frame">
-      <a href="https://play.google.com/store">
-      <img src="playstore.webp" alt="Gambar 3"> <!-- Ganti dengan gambar kamu -->
-    </a></div>
-
+      <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
+        <img src="playstore.webp" alt="Google Play Store logo" />
+      </a>
+    </div>
   </div>
-<div class="mobile-legend"><h1>Mobile legends</h1>
-<style>.mobile-legend {font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  margin-left: 20px;
-  margin-top: -150px; color: rgb(255, 255, 255);} </style> </div>
 
-  <div class="roblox"><h1>Roblox</h1>
-<style>.roblox {font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  margin-left: 50px;
-  margin-top: -60px; color: rgb(255, 255, 255);} </style></div>
-
-  <div class="plystr"><h1>Play store</h1>
-<style>.plystr {font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  margin-left: 90px;
-  margin-top: -60px; color: rgb(255, 255, 255);} </style></div>
-
+  <div class="labels">
+    <div>Mobile Legends</div>
+    <div>Roblox</div>
+    <div>Play Store</div>
+  </div>
 </body>
 </html>
